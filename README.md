@@ -28,9 +28,15 @@ source /opt/ros/humble/setup.bash
 
 Install the turtlesim package using the apt package manager:
 ```bash
-sudo apt update
 sudo apt install ros-humble-turtlesim
 ```
+Once installed, you can verify the package by running:
+```bash
+ros2 run turtlesim --help
+```
+![install](F.png)
+
+
 ### 3. Run the Simulation
 To launch the turtle window, open a new terminal and run the following node:
 ```bash
@@ -38,12 +44,16 @@ ros2 run turtlesim turtlesim_node
 ```
 A new window with a turtle will appear. Keep this window open.
 
+![](S.png)
+
+
 ### 4. Control the Turtle
 To move the turtle, open a second terminal and run the control node:
 ```Bash
 ros2 run turtlesim turtle_teleop_key
 ```
 Now, use the arrow keys on your keyboard (↑ ↓ ← →) to move the turtle in the first window.
+![](TH.png)
 
 ---
 ## Inspecting the ROS2 System
@@ -53,19 +63,19 @@ Now, use the arrow keys on your keyboard (↑ ↓ ← →) to move the turtle in
 ```bash
 ros2 node list
 ```
-![list](.jpg)
+![](FO.png)
 
 #### To view all active topics used by the running nodes, use the following command:
 
 ```bash
-ros2 node list
+ros2 topic list
 ```
 This displays a list of topics used for communication between nodes
-![topic](.jpg)
+![topic](FI.png)
 
 #### To view detailed information about a specific topic, like its message type and how many nodes are connected to it, use:
 
 ```bash
-ros2 topic info /turtle1/cmd_vel
+ros2 topic info /turtle1/pose
 ```
-![topic_info](.jpg)
+![topic_info](SI.png)
