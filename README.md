@@ -70,7 +70,9 @@ ros2 node list
 ```bash
 ros2 topic list
 ```
-This displays a list of topics used for communication between nodes
+This displays a list of topics used for communication between nodes.
+
+
 ![topic](FI.png)
 
 #### To view detailed information about a specific topic, like its message type and how many nodes are connected to it, use:
